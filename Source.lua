@@ -10,22 +10,27 @@ Window:AddMinimizeButton({
     Corner = { CornerRadius = UDim.new(0, 6) },
 })
 
-local Tab1 = Window:MakeTab({"Um", ""})
-local Tab2 = Window:MakeTab({"Dois", ""})
-local Tab3 = Window:MakeTab({"Três", ""})
+local Tab1 = Window:MakeTab({"Discord", "Info"})
+local Tab2 = Window:MakeTab({"Auto Things", "Home"})
+local Tab3 = Window:MakeTab({"Skills", "Sword"})
+local Tab4 = Window:MakeTab({"Flow And Style", "Signal"})
+local Tab5 = Window:MakeTab({"Items", "Locate"})
+local Tab6 = Window:MakeTab({"Misc", "Settings"})
+-- Tab6
+local Section = Tab6:AddSection({"Thems"})
 
-Tab1:AddButton({"Dark Theme", function()
+Tab6:AddButton({"Dark Theme", function()
   redzlib:SetTheme("Dark")
 end})
 
-Tab1:AddButton({"Darker Theme", function()
+Tab6:AddButton({"Darker Theme", function()
   redzlib:SetTheme("Darker")
 end})
 
-Tab1:AddButton({"Dark Purple", function()
+Tab6:AddButton({"Dark Purple", function()
   redzlib:SetTheme("Purple")
 end})
-
+-- end
 Window:SelectTab(Tab2)
 local Section = Tab2:AddSection({"Section"})
 local Paragraph = Tab2:AddParagraph({"Paragraph", "This is a Paragraph\nSecond Line"})
