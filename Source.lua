@@ -1,3 +1,10 @@
+local replicated_storage = game:GetService("ReplicatedStorage")
+local players = game:GetService("Players")
+local teams = game:GetService("Teams")
+local user_input_service = game:GetService("UserInputService")
+local run_service = game:GetService("RunService")
+local player = players.LocalPlayer
+
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/RedzLibV5/refs/heads/main/Source.lua"))()
 
 local Window = redzlib:MakeWindow({
