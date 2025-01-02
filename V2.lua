@@ -148,33 +148,29 @@ local FlowButton = Tab4:AddButton({
 })
 
 -- end
+local goal_text = ""
 -- items
-local goal_text
 local GoalTextBox = Tab5:AddTextBox({ 
-    Title = "Goal Effect tetx", 
+    Title = "Goal effect name", 
     Default = "", 
-    PlaceholderText = "", 
+    PlaceholderText = "Enter goal effect name", 
     ClearText = true, 
     Callback = function(value) 
-       
-         
         goal_text = value 
     end 
 }) 
- 
- 
-Tab5:AddButton({ 
-    Name = "Get",
-    Callback = function() 
-         
-        if goal_text and goal_text ~= "" then 
-             
-            local args = {
-                        [1] = "GoalEffects",
-                        [2] = goal_text
-                    }
 
-                    game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-                end
-            end
-    )}
+Tab5:AddButton({ 
+    Name = "Get", -- Fixed the button name
+    Callback = function() 
+        if goal_text and goal_text ~= "" then 
+            local args = {
+                [1] = "GoalEffects",
+                [2] = goal_text
+            }
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        else
+            print("Please enter a valid goal effect name.") -- Optional: feedback for empty input
+        end
+    end 
+})
