@@ -336,3 +336,51 @@ Tab5:AddButton({
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
 end
 )}
+--- stoppp
+Tab5:AddButton({ 
+    Name = "Get admin SHADOW Aura ( the best )", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "SHADOW"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+    )}
+
+Tab5:AddButton({ 
+    Name = "get Snowman Cape", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "Snowman Cape"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+    )}
+
+Tab5:AddButton({ 
+    Name = "get Peppermint Cape ( best normal )", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "Peppermint Cape"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+    )}
+
+Tab5:AddButton({ 
+    Name = "get Christmas Aura", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "Christmas Aura"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+    )}
