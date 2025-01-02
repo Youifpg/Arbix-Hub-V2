@@ -114,14 +114,14 @@ local slider1 = Tab3:AddSlider({
 })
 -- speed end
 -- notes:
-local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
-local Paragraph = Tab2:AddParagraph({"Note", "Dont enable auto get ball and the auto goal in same time"})
-local Paragraph = Tab4:AddParagraph({"Note", "The flow is prodigy its give you curve shot so yeah"})
-local Paragraph = Tab4:AddParagraph({"Note", "The Styles soon"})
-local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
-local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
-local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
-local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+Tab3:AddParagraph({"Note", "Skills soon"})
+Tab2:AddParagraph({"Note", "Dont enable auto get ball and the auto goal in same time"})
+Tab4:AddParagraph({"Note", "The flow is prodigy its give you curve shot so yeah"})
+Tab4:AddParagraph({"Note", "The Styles soon"})
+Tab3:AddParagraph({"Note", "Skills soon"})
+Tab3:AddParagraph({"Note", "Skills soon"})
+Tab3:AddParagraph({"Note", "Skills soon"})
+Tab3:AddParagraph({"Note", "Skills soon"})
 --end
 -- style and flow
 local function set_flow(desired_flow)
