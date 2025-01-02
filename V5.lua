@@ -107,8 +107,32 @@ local Toggle2 = Tab2:AddToggle({
 -- done
 -- speed start :
 
-local Section = Tab3:AddSection({"SPEED ( buggy )"})
-
+local Section = Tab3:AddSection({"SPEED"})
+Tab3:AddButton({ 
+    Name = "GET SPEED", -- Fixed the button name
+    Callback = function()
+   function isNumber(str)
+  if tonumber(str) ~= nil or str == 'inf' then
+    return true
+  end
+end
+local tspeed = 1
+local hb = game:GetService("RunService").Heartbeat
+local tpwalking = true
+local player = game:GetService("Players")
+local lplr = player.LocalPlayer
+local chr = lplr.Character
+local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+  if hum.MoveDirection.Magnitude > 0 then
+    if tspeed and isNumber(tspeed) then
+      chr:TranslateBy(hum.MoveDirection * tonumber(tspeed))
+    else
+      chr:TranslateBy(hum.MoveDirection)
+    end
+  end
+end
+        })
 -- speed here
 local Section = Tab3:AddSection({"INF Staimna"})
 
