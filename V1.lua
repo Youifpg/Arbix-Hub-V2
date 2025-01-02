@@ -119,7 +119,7 @@ local slider1 = Tab3:AddSlider({
 local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
 local Paragraph = Tab2:AddParagraph({"Note", "Dont enable auto get ball and the auto goal in same time"})
 local Paragraph = Tab4:AddParagraph({"Note", "The flow is prodigy its give you curve shot so yeah"})
-local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+local Paragraph = Tab4:AddParagraph({"Note", "The Styles soon"})
 local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
 local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
 local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
@@ -135,5 +135,8 @@ local function set_flow(desired_flow)
     end
 end
 
-
--- 
+local FlowButton = Tab4:AddButton({"Get prodigy ( not perm )", function()
+set_flow(”Prodigy”)
+end})
+-- end
+-- items 
