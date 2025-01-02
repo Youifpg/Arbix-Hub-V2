@@ -276,11 +276,61 @@ end
 
 
 Tab5:AddButton({ 
-    Name = "get presents Effect", -- Fixed the button name
+    Name = "get Presents Effect", -- Fixed the button name
     Callback = function()
     local args = {
     [1] = "GoalEffects",
     [2] = "Presents"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+)}
+--
+local Section = Tab2:AddSection({"Cards One click"})
+Tab5:AddButton({ 
+    Name = "get VIP card", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "VIP"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+    )}        
+Tab5:AddButton({ 
+    Name = "get Legend card", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "Legend"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+)}
+
+
+Tab5:AddButton({ 
+    Name = "get Crystal card ( best )", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "Crystal"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+)}
+
+
+Tab5:AddButton({ 
+    Name = "get Admin card", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "YingYang"
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
