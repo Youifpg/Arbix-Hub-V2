@@ -13,7 +13,7 @@ local Window = redzlib:MakeWindow({
 })
 
 Window:AddMinimizeButton({
-    Button = { Image = "rbxassetid://122413984562434", BackgroundTransparency = 0 },
+    Button = { Image = "rbxassetid://126511980185658", BackgroundTransparency = 0 },
     Corner = { CornerRadius = UDim.new(0, 6) },
 })
 
@@ -24,11 +24,12 @@ local Tab3 = Window:MakeTab({"Skills", "Sword"})
 local Tab4 = Window:MakeTab({"Flow And Style", "Signal"})
 local Tab5 = Window:MakeTab({"Items", "Locate"})
 local Tab6 = Window:MakeTab({"Misc", "Settings"})
-
+--
+local Section = Tab1:AddSection({"Discord"})
 tab1:AddDiscordInvite({
     Name = "Arbix Hub | Community",
-    Logo = "rbxassetid://18751483361",
-    Invite = "https://discord.com/invite/Dmg8EJ2neK",
+    Logo = "rbxassetid://126511980185658",
+    Invite = "https://discord.gg/VRHYbyj8Dy",
 })
 -- auto farm starting
 local Section = Tab2:AddSection({"Auto Farm"})
