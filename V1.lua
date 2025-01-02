@@ -137,4 +137,13 @@ local FlowButton = Tab4:AddButton({"Get prodigy ( not perm )", function()
 set_flow(”Prodigy”)
 end})
 -- end
--- items 
+-- items
+local item1Text = Tab5AddTextBox ({
+  Name = "Any Goal effect",
+  Default = "",
+  PlaceholderText = "",
+  ClearText = true,
+  Callback = function(text)
+ Tab4:AddButton({"EQUIP", function()
+ 
+end})
