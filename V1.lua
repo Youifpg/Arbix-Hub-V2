@@ -115,3 +115,15 @@ local slider1 = Tab3:AddSlider({
   end
 })
 -- speed end
+-- notes:
+local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+local Paragraph = Tab2:AddParagraph({"Note", "Dont enable auto get ball and the auto goal in same time"})
+local Paragraph = Tab4:AddParagraph({"Note", "The flow is prodigy its give you curve shot so yeah"})
+local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
+--end
+
+-- 
