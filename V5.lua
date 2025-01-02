@@ -4,7 +4,6 @@ local player = players.LocalPlayer -- Moved this line after players is defined
 local teams = game:GetService("Teams")
 local replicatedStorage = game:GetService("ReplicatedStorage") -- Added this for the ReplicatedStorage reference
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/RedzLibV5/refs/heads/main/Source.lua"))()
-
 -- ^^^^^^^^^^^^
 local Window = redzlib:MakeWindow({
     Title = "Arbix Hub : Blue Lock",
@@ -24,7 +23,12 @@ local Tab3 = Window:MakeTab({"Skills", "Sword"})
 local Tab4 = Window:MakeTab({"Flow And Style", "Signal"})
 local Tab5 = Window:MakeTab({"Items", "Locate"})
 local Tab6 = Window:MakeTab({"Misc", "Settings"})
-
+--
+local discordbutton = tab1:AddDiscordInvite({
+    Name = "Arbix Hub | Community",
+    Logo = "rbxassetid://126511980185658",
+    Invite = "https://discord.gg/VRHYbyj8Dy",
+})
 -- auto farm starting
 local Section = Tab2:AddSection({"Auto Farm"})
 
