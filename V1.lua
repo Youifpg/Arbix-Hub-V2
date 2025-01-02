@@ -125,5 +125,15 @@ local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
 local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
 local Paragraph = Tab3:AddParagraph({"Note", "Skills soon"})
 --end
+-- style and flow
+local function set_flow(desired_flow)
+    if player:FindFirstChild("PlayerStats") then
+        local playerStats = player.PlayerStats
+        if playerStats:FindFirstChild("Flow") then
+            playerStats.Flow.Value = desired_flow
+        end
+    end
+end
+
 
 -- 
