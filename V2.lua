@@ -149,17 +149,27 @@ local FlowButton = Tab4:AddButton({
 
 -- end
 -- items
-local item1Text = Tab5:AddTextBox({
-    Title = "Any Goal effect",
-    Default = "",
-    PlaceholderText = "",
-    ClearText = true,
-    Callback = function(goal_text)
-        Tab4:AddButton({
-            Name = "EQUIP",
-            Callback = function()
-                if goal_text ~= "" then
-                    local args = {
+local GoalTextBox = Tab5:AddTextBox({ 
+    Title = "Music ID", 
+    Default = "", 
+    TextDisappear = false, 
+    PlaceholderText = "kurdish", 
+    ClearText = true, 
+    Callback = function(value) 
+       
+         
+        goal_text = value 
+    end 
+}) 
+ 
+ 
+Tab5:AddButton({ 
+    Name = "Play Music [Gamepass Premium]",
+    Callback = function() 
+         
+        if goal_text and goal_text ~= "" then 
+             
+            local args = {
                         [1] = "GoalEffects",
                         [2] = goal_text
                     }
@@ -167,8 +177,4 @@ local item1Text = Tab5:AddTextBox({
                     game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
                 end
             end
-        })
-    end
-})
-
--- Additional features can be added here as needed
+    )}
