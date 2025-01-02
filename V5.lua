@@ -104,8 +104,14 @@ local Toggle2 = Tab2:AddToggle({
     end
 })
 
+local Section = Tab3:AddSection({"SPEED"})
+Tab3:AddButton({ 
+    Name = "INF STAIMNA", -- Fixed the button name
+    Callback = function()
+            loadstring(game:HttpGet("https://pastebin.com/raw/Bqbsph7s"))()
+        end 
+    })
 local Section = Tab3:AddSection({"INF Staimna"})
-
 Tab3:AddButton({ 
     Name = "INF STAIMNA", -- Fixed the button name
     Callback = function() 
