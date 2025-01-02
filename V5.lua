@@ -104,33 +104,6 @@ local Toggle2 = Tab2:AddToggle({
     end
 })
 
--- done
--- speed start :
-
-local Section = Tab3:AddSection({"SPEED"})
--- Function to set the player's speed
-local function setPlayerSpeed(speed)
-    local player = game:GetService("Players").LocalPlayer
-    local chr = player.Character or player.CharacterAdded:Wait()
-    local hum = chr:FindFirstChildOfClass("Humanoid")
-
-    if hum then
-        hum.WalkSpeed = speed
-        print("Player speed set to: " .. speed)
-    else
-        warn("Humanoid not found!")
-    end
-end
-
--- Add button to the UI
-tab3:AddButton({
-    Name = "GET SPEED",
-    Callback = function()
-        local speed = 16 -- Set your desired speed here
-        setPlayerSpeed(speed) -- Call the function to set the speed
-    end
-})
--- speed here
 local Section = Tab3:AddSection({"INF Staimna"})
 
 Tab3:AddButton({ 
@@ -150,6 +123,7 @@ Tab3:AddParagraph({"Note", "Skills soon"})
 Tab2:AddParagraph({"Note", "Don't enable auto get ball and the auto goal at the same time"})
 Tab4:AddParagraph({"Note", "The flow is prodigy; it gives you a curve shot."})
 Tab4:AddParagraph({"Note", "The Styles soon"})
+Tab6:AddParagraph({"OWNER", "SCRIPT BY TOUKA JOIN ARBIX HUB"})
 -- end
 -- style and flow
 local function set_flow(desired_flow)
