@@ -107,6 +107,8 @@ local Toggle2 = Tab2:AddToggle({
 
 -- done
 -- speed start :
+local Section = Tab3:AddSection({"SPEED ( buggy )"})
+
 local slider1 = Tab3:AddSlider({
     Name = "Speed",
     Min = 1,
@@ -117,6 +119,19 @@ local slider1 = Tab3:AddSlider({
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end
 })
+
+local Section = Tab3:AddSection({"INF Staimna"})
+
+Tab2:AddButton({ 
+    Name = "INF STAIMNA", -- Fixed the button name
+    Callback = function() 
+    local args = {
+    [1] = 0/0
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.DecreaseStamina:FireServer(unpack(args))
+        end
+    })
 
 -- speed end
 -- notes:
