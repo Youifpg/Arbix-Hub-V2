@@ -140,6 +140,8 @@ local function set_flow(desired_flow)
     end
 end
 
+local Section = Tab2:AddSection({"Style and flow"})
+
 local FlowButton = Tab4:AddButton({
     Name = "Get prodigy (not perm)",
     Callback = function()
@@ -148,6 +150,8 @@ local FlowButton = Tab4:AddButton({
 })
 
 -- end
+local Section = Tab2:AddSection({"Goal effects"})
+
 local goal_text = ""
 -- items
 local GoalTextBox = Tab5:AddTextBox({ 
@@ -175,6 +179,8 @@ Tab5:AddButton({
     end 
 })
 -- 2
+local Section = Tab2:AddSection({"Cards"})
+
 local card_text = ""
 local CardTextBox = Tab5:AddTextBox({ 
     Title = "Card name", 
@@ -201,6 +207,8 @@ Tab5:AddButton({
     end 
 })
 -- 3
+local Section = Tab2:AddSection({"Cosmetics"})
+
 local cos_text = ""
 local cosTextBox = Tab5:AddTextBox({ 
     Title = "Cosmetic name", 
@@ -227,3 +235,7 @@ Tab5:AddButton({
     end 
 })
 -- 
+local Section = Tab2:AddSection({"Cards one click equip"})
+Tab5:AddButton({ 
+    Name = "", -- Fixed the button name
+    Callback = function() 
