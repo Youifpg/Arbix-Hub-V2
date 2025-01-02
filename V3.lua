@@ -124,11 +124,6 @@ Tab3:AddParagraph({"Note", "Skills soon"})
 Tab2:AddParagraph({"Note", "Don't enable auto get ball and the auto goal at the same time"})
 Tab4:AddParagraph({"Note", "The flow is prodigy; it gives you a curve shot."})
 Tab4:AddParagraph({"Note", "The Styles soon"})
-Tab3:AddParagraph({"Note", "Skills soon"})
-Tab3:AddParagraph({"Note", "Skills soon"})
-Tab3:AddParagraph({"Note", "Skills soon"})
-Tab3:AddParagraph({"Note", "Skills soon"})
-
 -- end
 -- style and flow
 local function set_flow(desired_flow)
@@ -140,7 +135,7 @@ local function set_flow(desired_flow)
     end
 end
 
-local Section = Tab2:AddSection({"Style and flow"})
+local Section = Tab5:AddSection({"Style and flow"})
 
 local FlowButton = Tab4:AddButton({
     Name = "Get prodigy (not perm)",
@@ -150,7 +145,7 @@ local FlowButton = Tab4:AddButton({
 })
 
 -- end
-local Section = Tab2:AddSection({"Goal effects"})
+local Section = Tab5:AddSection({"Goal effects"})
 
 local goal_text = ""
 -- items
@@ -179,7 +174,7 @@ Tab5:AddButton({
     end 
 })
 -- 2
-local Section = Tab2:AddSection({"Cards"})
+local Section = Tab5:AddSection({"Cards"})
 
 local card_text = ""
 local CardTextBox = Tab5:AddTextBox({ 
@@ -207,7 +202,7 @@ Tab5:AddButton({
     end 
 })
 -- 3
-local Section = Tab2:AddSection({"Cosmetics"})
+local Section = Tab5:AddSection({"Cosmetics"})
 
 local cos_text = ""
 local cosTextBox = Tab5:AddTextBox({ 
@@ -235,7 +230,7 @@ Tab5:AddButton({
     end 
 })
 -- 
-local Section = Tab2:AddSection({"Goal effects one click"})
+local Section = Tab5:AddSection({"Goal effects one click"})
 Tab5:AddButton({ 
     Name = "get Wonderland effect", -- Fixed the button name
     Callback = function()
@@ -287,7 +282,7 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService
 end
 )}
 --
-local Section = Tab2:AddSection({"Cards One click"})
+local Section = Tab5:AddSection({"Cards One click"})
 Tab5:AddButton({ 
     Name = "get VIP card", -- Fixed the button name
     Callback = function()
@@ -337,6 +332,7 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService
 end
 )}
 --- stoppp
+local Section = Tab5:AddSection({"Cosmetics Ine click"})
 Tab5:AddButton({ 
     Name = "Get admin SHADOW Aura ( the best )", -- Fixed the button name
     Callback = function()
