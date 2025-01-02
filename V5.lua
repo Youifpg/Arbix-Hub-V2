@@ -108,7 +108,28 @@ local Toggle2 = Tab2:AddToggle({
 -- speed start :
 
 local Section = Tab3:AddSection({"SPEED"})
+-- Function to set the player's speed
+local function setPlayerSpeed(speed)
+    local player = game:GetService("Players").LocalPlayer
+    local chr = player.Character or player.CharacterAdded:Wait()
+    local hum = chr:FindFirstChildOfClass("Humanoid")
 
+    if hum then
+        hum.WalkSpeed = speed
+        print("Player speed set to: " .. speed)
+    else
+        warn("Humanoid not found!")
+    end
+end
+
+-- Add button to the UI
+tab3:AddButton({
+    Name = "GET SPEED",
+    Callback = function()
+        local speed = 16 -- Set your desired speed here
+        setPlayerSpeed(speed) -- Call the function to set the speed
+    end
+})
 -- speed here
 local Section = Tab3:AddSection({"INF Staimna"})
 
