@@ -24,7 +24,7 @@ local Tab4 = Window:MakeTab({"Flow And Style", "Signal"})
 local Tab5 = Window:MakeTab({"Items", "Locate"})
 local Tab6 = Window:MakeTab({"Misc", "Settings"})
 --
-local discordbutton = tab1:AddDiscordInvite({
+tab1:AddDiscordInvite({
     Name = "Arbix Hub | Community",
     Logo = "rbxassetid://126511980185658",
     Invite = "https://discord.gg/VRHYbyj8Dy",
