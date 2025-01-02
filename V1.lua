@@ -36,7 +36,7 @@ Tab6:AddButton({"Dark Purple", function()
 end})
 
 Window:SelectTab(Tab2)
-local Section = Tab2:AddSection({"Auto Goal"})
+local Section = Tab2:AddSection({"Auto Farm"})
 
 local isAutoGoalEnabled = false
 
@@ -84,6 +84,40 @@ local Toggle1 = Tab2:AddToggle({
         if isAutoGoalEnabled then
             while isAutoGoalEnabled do
                 AutoGoal()
+                wait(0.1) -- Prevents the loop from running too fast
+            end
+        end
+    end
+})
+
+local isAutoBallEnabled = false
+
+local function trackFootball()
+                while true do
+                    local football = workspace:FindFirstChild("Football")
+                    if football then
+                        if character:FindFirstChild("Football") then
+                            break
+                        end
+
+                        character:SetPrimaryPartCFrame(football.CFrame * CFrame.new(0, 0, 0))
+                    else
+                        print("Football is not in workspace anymore")
+                    end
+
+                    wait(0.1)
+                end
+            end
+
+local Toggle1 = Tab2:AddToggle({
+    Name = "Auto Goal",
+    Description = "Automatically goes to the goal when you have the football.",
+    Default = false,
+    Callback = function(value)
+        isAutoGoalEnabled = value
+        if isAutoBallEnabled then
+            while isAutoBallEnabled do
+                trackFootball()
                 wait(0.1) -- Prevents the loop from running too fast
             end
         end
