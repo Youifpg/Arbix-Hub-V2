@@ -174,3 +174,30 @@ Tab5:AddButton({
         end
     end 
 })
+-- 2
+local card_text = ""
+-- items
+local CardTextBox = Tab5:AddTextBox({ 
+    Title = "Card name", 
+    Default = "", 
+    PlaceholderText = "Enter Card name", 
+    ClearText = true, 
+    Callback = function(value) 
+        card_text = value 
+    end 
+}) 
+
+Tab5:AddButton({ 
+    Name = "Get", -- Fixed the button name
+    Callback = function() 
+        if card_text and card_text ~= "" then 
+            local args = {
+                [1] = "Cards",
+                [2] = card_text
+            }
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        else
+            print("Please enter a valid card name.") -- Optional: feedback for empty input
+        end
+    end 
+})
