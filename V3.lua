@@ -176,7 +176,6 @@ Tab5:AddButton({
 })
 -- 2
 local card_text = ""
--- items
 local CardTextBox = Tab5:AddTextBox({ 
     Title = "Card name", 
     Default = "", 
@@ -201,3 +200,30 @@ Tab5:AddButton({
         end
     end 
 })
+-- 3
+local cos_text = ""
+local cosTextBox = Tab5:AddTextBox({ 
+    Title = "Cosmetic name", 
+    Default = "", 
+    PlaceholderText = "Enter Cosmetic name", 
+    ClearText = true, 
+    Callback = function(value) 
+        cos_text = value 
+    end 
+}) 
+
+Tab5:AddButton({ 
+    Name = "Get", -- Fixed the button name
+    Callback = function() 
+        if cos_text and cos_text ~= "" then 
+            local args = {
+                [1] = "Cosmetics",
+                [2] = cos_text
+            }
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        else
+            print("Please enter a valid Cosmetic name.") -- Optional: feedback for empty input
+        end
+    end 
+})
+-- 
