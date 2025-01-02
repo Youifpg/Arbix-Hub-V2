@@ -107,6 +107,7 @@ local Toggle2 = Tab2:AddToggle({
 
 -- done
 -- speed start :
+
 local Section = Tab3:AddSection({"SPEED ( buggy )"})
 
 local slider1 = Tab3:AddSlider({
@@ -122,7 +123,7 @@ local slider1 = Tab3:AddSlider({
 
 local Section = Tab3:AddSection({"INF Staimna"})
 
-Tab2:AddButton({ 
+Tab3:AddButton({ 
     Name = "INF STAIMNA", -- Fixed the button name
     Callback = function() 
     local args = {
