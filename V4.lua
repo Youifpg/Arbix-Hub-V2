@@ -1,6 +1,4 @@
 -- locals
-
-
 local players = game:GetService("Players") -- Corrected the order of declaration
 local player = players.LocalPlayer -- Moved this line after players is defined
 local teams = game:GetService("Teams")
@@ -27,17 +25,6 @@ local Tab4 = Window:MakeTab({"Flow And Style", "Signal"})
 local Tab5 = Window:MakeTab({"Items", "Locate"})
 local Tab6 = Window:MakeTab({"Misc", "Settings"})
 --
-local Section = Tab2:AddSection({"INF Staimna"})
-Tab2:AddButton({ 
-    Name = "INF STAIMNA", -- Fixed the button name
-    Callback = function() 
-    local args = {
-    [1] = 0/0
-}
-
-game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.DecreaseStamina:FireServer(unpack(args))
-        end
-    })
 --BB
 local Section = Tab1:AddSection({"Discord"})
 
@@ -126,6 +113,17 @@ local Toggle2 = Tab2:AddToggle({
     end
 })
 
+local Section = Tab2:AddSection({"INF Staimna"})
+Tab2:AddButton({ 
+    Name = "INF STAIMNA", -- Fixed the button name
+    Callback = function() 
+    local args = {
+    [1] = 0/0
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.DecreaseStamina:FireServer(unpack(args))
+        end
+    })
 -- done
 -- speed start :
 local slider1 = Tab3:AddSlider({
