@@ -139,11 +139,19 @@ end})
 -- end
 -- items
 local item1Text = Tab5AddTextBox ({
-  Name = "Any Goal effect",
+  Title = "Any Goal effect",
   Default = "",
   PlaceholderText = "",
   ClearText = true,
-  Callback = function(text)
+  Callback = function(goal_text)
  Tab4:AddButton({"EQUIP", function()
- 
+ if goal_text ~= "" then
+   local args = {
+    [1] = "GoalEffects",
+    [2] = goal_text
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+  end
+end)
 end})
