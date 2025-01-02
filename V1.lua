@@ -16,7 +16,7 @@ Window:AddMinimizeButton({
     Button = { Image = "rbxassetid://122413984562434", BackgroundTransparency = 0 },
     Corner = { CornerRadius = UDim.new(0, 6) },
 })
-
+-- tabs
 local Tab1 = Window:MakeTab({"Discord", "Info"})
 local Tab2 = Window:MakeTab({"Auto Things", "Home"})
 local Tab3 = Window:MakeTab({"Skills", "Sword"})
@@ -103,3 +103,15 @@ local Toggle2 = Tab2:AddToggle({
     end
 })
 -- done
+-- speed start :
+local slider1 = Tab3:AddSlider({
+  Name = "Speed",
+  Min = 1,
+  Max = 100,
+  Increase = 1,
+  Default = 16,
+  Callback = function(Value)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+  end
+})
+-- speed end
