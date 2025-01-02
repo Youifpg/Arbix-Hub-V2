@@ -149,11 +149,11 @@ local FlowButton = Tab4:AddButton({
 
 -- end
 -- items
+local goal_text
 local GoalTextBox = Tab5:AddTextBox({ 
-    Title = "Music ID", 
+    Title = "Goal Effect tetx", 
     Default = "", 
-    TextDisappear = false, 
-    PlaceholderText = "kurdish", 
+    PlaceholderText = "", 
     ClearText = true, 
     Callback = function(value) 
        
@@ -164,7 +164,7 @@ local GoalTextBox = Tab5:AddTextBox({
  
  
 Tab5:AddButton({ 
-    Name = "Play Music [Gamepass Premium]",
+    Name = "Get",
     Callback = function() 
          
         if goal_text and goal_text ~= "" then 
