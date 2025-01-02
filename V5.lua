@@ -109,39 +109,7 @@ local Toggle2 = Tab2:AddToggle({
 
 local Section = Tab3:AddSection({"SPEED ( buggy )"})
 
-local slider1 = Tab3:AddSlider({
-    Name = "Speed",
-    Min = 1,
-    Max = 100,
-    Increase =  1,
-    Default = 16,
-    Callback = function(Value)
-        tspeed = Value
-    end
-})
-
-local function getCharacterAndHumanoid()
-    local chr = player.Character or player.CharacterAdded:Wait()
-    local hum = chr:WaitForChild("Humanoid")
-    return chr, hum
-end
-
--- Main loop to adjust player speed
-local function adjustSpeed()
-    while tpwalking do
-        local chr, hum = getCharacterAndHumanoid()
-        hb:Wait()
-
-        if hum and hum.Parent then
-            if hum.MoveDirection.Magnitude > 0 then
-                chr:TranslateBy(hum.MoveDirection * (tspeed / 16))
-            end
-        end
-    end
-end
-
--- Start the speed adjustment loop
-adjustSpeed()
+-- speed here
 local Section = Tab3:AddSection({"INF Staimna"})
 
 Tab3:AddButton({ 
