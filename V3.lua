@@ -240,8 +240,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-)}
+        end          
+    })
 
 
 Tab5:AddButton({ 
@@ -253,8 +253,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-)}
+        end          
+    })
 
 
 Tab5:AddButton({ 
@@ -265,9 +265,9 @@ Tab5:AddButton({
     [2] = "Time Stop"
 }
 
-game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-)}
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))       
+        end          
+    })
 
 
 Tab5:AddButton({ 
@@ -279,8 +279,9 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-)}
+        end          
+    })
+                       
 --
 local Section = Tab5:AddSection({"Cards One click"})
 Tab5:AddButton({ 
@@ -292,8 +293,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-    )}        
+        end          
+    })
 Tab5:AddButton({ 
     Name = "get Legend card", -- Fixed the button name
     Callback = function()
@@ -303,8 +304,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-)}
+        end          
+    })
 
 
 Tab5:AddButton({ 
@@ -316,8 +317,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-)}
+        end          
+    })
 
 
 Tab5:AddButton({ 
@@ -329,8 +330,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-)}
+        end          
+    })
 --- stoppp
 local Section = Tab5:AddSection({"Cosmetics Ine click"})
 Tab5:AddButton({ 
@@ -342,8 +343,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-    )}
+        end          
+    })
 
 Tab5:AddButton({ 
     Name = "get Snowman Cape", -- Fixed the button name
@@ -354,8 +355,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-    )}
+        end          
+    })
 
 Tab5:AddButton({ 
     Name = "get Peppermint Cape ( best normal )", -- Fixed the button name
@@ -366,8 +367,8 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-    )}
+        end          
+    })
 
 Tab5:AddButton({ 
     Name = "get Christmas Aura", -- Fixed the button name
@@ -378,5 +379,5 @@ Tab5:AddButton({
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end
-    )}
+        end          
+    })
