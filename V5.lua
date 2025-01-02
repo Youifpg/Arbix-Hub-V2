@@ -113,41 +113,35 @@ local slider1 = Tab3:AddSlider({
     Name = "Speed",
     Min = 1,
     Max = 100,
-    Increase = 1,
+    Increase =  1,
     Default = 16,
     Callback = function(Value)
-        -- Set the speed based on the slider value
         tspeed = Value
     end
 })
 
-local tspeed = 16 -- Default speed
-local hb = game:GetService("RunService").Heartbeat
-local tpwalking = true
-local player = game:GetService("Players")
-local lplr = player.LocalPlayer
-
--- Ensure the character and humanoid are set up correctly
 local function getCharacterAndHumanoid()
-    local chr = lplr.Character or lplr.CharacterAdded:Wait()
+    local chr = player.Character or player.CharacterAdded:Wait()
     local hum = chr:WaitForChild("Humanoid")
     return chr, hum
 end
 
 -- Main loop to adjust player speed
-while tpwalking do
-    local chr, hum = getCharacterAndHumanoid()
-    hb:Wait() -- Wait for the next heartbeat
+local function adjustSpeed()
+    while tpwalking do
+        local chr, hum = getCharacterAndHumanoid()
+        hb:Wait()
 
-    if hum and hum.Parent then
-        if hum.MoveDirection.Magnitude > 0 then
-            -- Translate the character based on the speed
-            chr:TranslateBy(hum.MoveDirection * (tspeed / 16)) -- Adjust speed scaling
+        if hum and hum.Parent then
+            if hum.MoveDirection.Magnitude > 0 then
+                chr:TranslateBy(hum.MoveDirection * (tspeed / 16))
+            end
         end
     end
 end
-})
 
+-- Start the speed adjustment loop
+adjustSpeed()
 local Section = Tab3:AddSection({"INF Staimna"})
 
 Tab3:AddButton({ 
