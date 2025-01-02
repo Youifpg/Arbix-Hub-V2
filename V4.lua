@@ -25,6 +25,11 @@ local Tab4 = Window:MakeTab({"Flow And Style", "Signal"})
 local Tab5 = Window:MakeTab({"Items", "Locate"})
 local Tab6 = Window:MakeTab({"Misc", "Settings"})
 
+tab1:AddDiscordInvite({
+    Name = "Arbix Hub | Community",
+    Logo = "rbxassetid://18751483361",
+    Invite = "https://discord.com/invite/Dmg8EJ2neK",
+})
 -- auto farm starting
 local Section = Tab2:AddSection({"Auto Farm"})
 
