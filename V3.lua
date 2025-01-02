@@ -235,7 +235,54 @@ Tab5:AddButton({
     end 
 })
 -- 
-local Section = Tab2:AddSection({"Cards one click equip"})
+local Section = Tab2:AddSection({"Goal effects one click"})
 Tab5:AddButton({ 
-    Name = "", -- Fixed the button name
-    Callback = function() 
+    Name = "get Wonderland effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Wonderland"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+)}
+
+
+Tab5:AddButton({ 
+    Name = "get Conquer effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Conquer"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+)}
+
+
+Tab5:AddButton({ 
+    Name = "get Time Stop effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Time Stop"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+)}
+
+
+Tab5:AddButton({ 
+    Name = "get presents Effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Presents"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end
+)}
