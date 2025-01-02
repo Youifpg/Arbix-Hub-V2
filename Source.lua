@@ -39,9 +39,53 @@ Tab6:AddButton({"Dark Purple", function()
 end})
 -- end
 Window:SelectTab(Tab2)
-local Section = Tab2:AddSection({"Section"})
-local Paragraph = Tab2:AddParagraph({"Paragraph", "This is a Paragraph\nSecond Line"})
+local Section = Tab2:AddSection({"Auto goal"})
 
+local Toggle1 = Tab2:AddToggle({
+  Name = "Toggle 1",
+  Description = "This is a <font color='rgb(88, 101, 242)'>Toggle</font> Example",
+  Default = false
+  Callback = function()
+             local function AutoGoal()
+            if character:FindFirstChild("Football") then
+                wait(3)
+
+                local teleporting = true
+
+                if player.Team.Name == "Away" then
+                    while teleporting do
+                        if not player.Character:FindFirstChild("Football") then
+                            wait(3)
+                            return
+                        end
+                        character:SetPrimaryPartCFrame(workspace.Goals.Away.CFrame * CFrame.new(0, 0, 0))
+                        wait(0.1)
+                    end
+                elseif player.Team.Name == "Home" then
+                    while teleporting do
+                        if not player.Character:FindFirstChild("Football") then
+                            wait(3)
+                            return
+                        end
+                        character:SetPrimaryPartCFrame(workspace.Goals.Home.CFrame * CFrame.new(0, 0, 0))
+                        print("Home Team = Away Goal")
+                        wait(0.1)
+                    end
+                end
+
+                local args = {
+                    [1] = 30,
+                    [4] = Vector3.new(0, 0, 0)
+                }
+
+                game:GetService("ReplicatedStorage").Packages.Knit.Services.BallService.RE.Shoot:FireServer()
+
+                teleporting = false
+
+                wait(2)
+            end
+        end
+})
 local Number = 0
 local Button = Tab2:AddButton({"Button", function()
   Number = Number + 1
