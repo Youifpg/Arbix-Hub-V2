@@ -60,7 +60,15 @@ local function GetOwnedSeed(Client)
 end
 
 local function AutoPlantSeed()
-    local MyFarm = findMyFarm()
+    local MyFarm; do 
+    for i,v in (workspace.Farm:GetChildren()) do
+        if (v.Important.Data.Owner.Value == Client.Name) then
+            MyFarm = v
+        end
+        
+        if MyFarm then break end 
+    end
+end
     if not MyFarm then return end
 
     local Seed = GetOwnedSeed(Client)
