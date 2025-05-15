@@ -105,7 +105,7 @@ local function autoCollectOnce()
     running = false
 end
 
-local Toggle1 = Tab2:AddToggle({
+local Toggle1 = Tab1:AddToggle({
     Name = "Auto Collect",
     Description = "",
     Default = false
