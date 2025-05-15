@@ -26,9 +26,8 @@ local Section = Tab1:AddSection({"Auto Plant"})
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Client = Players.LocalPlayer
-local RunService = game:GetService("RunService")
 
-local AutoPlant = false  -- toggle state control
+local AutoPlant = false
 
 local Toggle1 = Tab1:AddToggle({
     Name = "Auto Plant",
@@ -36,13 +35,19 @@ local Toggle1 = Tab1:AddToggle({
     Default = false,
     Callback = function(value)
         AutoPlant = value
+
         task.spawn(function()
             while AutoPlant do
                 local Tool = Client.Character and Client.Character:FindFirstChildOfClass("Tool")
                 if Tool and Tool.Name:find("Seed") then
-                    local FirstWordOfToolName = Tool.Name:split(" ")[1]
+                    
+                    local nameParts = Tool.Name:split(" ")
+                    if nameParts[#nameParts] == "Seed" then
+                        table.remove(nameParts) 
+                    end
+                    local CropName = table.concat(nameParts, " ")
 
-                   
+                    
                     local MyFarm
                     for _, v in pairs(workspace.Farm:GetChildren()) do
                         if v:FindFirstChild("Important") and v.Important:FindFirstChild("Data") then
@@ -71,14 +76,14 @@ local Toggle1 = Tab1:AddToggle({
                         if pos then
                             local args = {
                                 pos,
-                                FirstWordOfToolName
+                                CropName
                             }
                             ReplicatedStorage.GameEvents.Plant_RE:FireServer(unpack(args))
                         end
                     end
                 end
 
-                task.wait(0.5)
+                task.wait()
             end
         end)
     end
